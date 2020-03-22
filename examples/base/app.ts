@@ -87,6 +87,8 @@ axios({
     a: 1,
     b: 2
   }
+}).then((res) => {
+  console.log(res)
 })
 
 axios({
@@ -95,17 +97,20 @@ axios({
   headers: {
     'content-type': 'application/json;'
   },
+  responseType: 'json',
   data: {
-    a: 1,
-    b: 2
+    a: 3,
+    b: 4
   }
+}).then((res) => {
+  console.log(res)
 })
 
-const paramsString = 'q=URLUtils.searchParams&topic=api'
-const searchParams = new URLSearchParams(paramsString)
+// const paramsString = 'q=URLUtils.searchParams&topic=api'
+// const searchParams = new URLSearchParams(paramsString)
 
-axios({
-  method: 'post',
-  url: '/base/post',
-  data: searchParams
-})
+// axios({
+//   method: 'post',
+//   url: '/base/post',
+//   data: searchParams
+// })
